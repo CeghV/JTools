@@ -93,4 +93,4 @@ The "Log out" button is self-explanatory.
 
 ## Extras
 
-JTools was developed in joint with CeghV and PaddockBux.
+JTools was developed by CeghV and documented by PaddockBux.
