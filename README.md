@@ -78,12 +78,12 @@ Inventory files aren't very important, but is an option. They contain the user's
 World names are important and cannot be left empty, they name the world.\
 Since worlds are based on ID, you can name them anything you want, including making duplicate names.
 
-After filling out all of the required fields, you can now upload the world. Press the "Upload World" button and wait for the confirmation of upload.\
-A screenshot below shows a successful upload.
+After filling out all of the required fields, you can now upload the world. Press the "Upload World" button and wait for the confirmation of upload. A screenshot below shows a successful upload.
 
 ![Figure 6](./screenshots/upload2.png)
 
-And you're done! Enjoy your copied world.
+You should now see the uploaded world in your current list of worlds under the name you set.\
+Enjoy JTools!
 
 ### Account
 
