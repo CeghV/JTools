@@ -61,7 +61,7 @@ if(!empty($_POST["name"]) and is_uploaded_file($_FILES["world"]["tmp_name"]))   
         $username=$resultJSON->owner->username;
         $identifier=$resultJSON->identifier;
         if(empty($username) or empty($identifier))    {
-            header("Location: /index.php?error3=Couldn't upload world (".$header.")");
+            header("Location: /index.php?error3=Couldn't upload world");
             exit();
         }
         header("Location: /index.php?success=Successfully uploaded world under username '".$username."', with ID '".$identifier."'");
