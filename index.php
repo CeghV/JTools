@@ -69,7 +69,6 @@
         <input type="email" name="login-email" id="login-email"><br><br>
         <label for="login-password">Password:</label>
         <input type="password" name="login-password" id="login-password"><br><br>
-        <label for="submit">Enter info:</label>
         <input type="submit" value="Log in" name="submit">
     </form>
     <?php }?>
