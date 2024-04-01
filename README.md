@@ -21,7 +21,7 @@ You can also find a demo video [here](demo.mp4).
 Open your browser to [localhost](http://localhost).\
 Find your email and password for Jamango! and enter them into the interface.
 
-![Figure 1](screenshots\login.png)
+![Figure 1](./screenshots/login.png)
 
 ### Downloading worlds
 
@@ -39,17 +39,17 @@ We recommend using the in-game interface for this example, but one way you can f
 First, open any world (this also includes public worlds).\
 For our example, we will navigate to the "Discover" tab.
 
-![Figure 2](screenshots\download1.png)
+![Figure 2](./screenshots/download1.png)
 
 After navigating to the "Discover" tab, we can see the world IDs of published worlds.\
 In the screenshot below, we can see the ID for our current example.
 
-![Figure 3](screenshots\download2.png)
+![Figure 3](./screenshots/download2.png)
 
 Copy the world ID and navigate to the main dashboard of JTools.\
 In the main dashboard, enter the world ID in the "Download World" section.
 
-![Figure 4](screenshots\download3.png)
+![Figure 4](./screenshots/download3.png)
 
 If you noticed, we have a pulldown for two download options, either blob or JSON.\
 We recommend using blob to download files as they are smaller in size compared to JSON.\
@@ -64,7 +64,7 @@ For our example we will upload our copy of Jam's Challenge to our account.
 
 First, navigate to the dashboard and upload the world file binary to the location in the screenshot below.
 
-![Figure 5](screenshots\upload1.png)
+![Figure 5](./screenshots/upload1.png)
 
 After uploading the world file, we can name the world and fill out other inputs.\
 Generator types are very important, as the world was either generated in the terrain form or the blank form.\
@@ -81,7 +81,7 @@ Since worlds are based on ID, you can name them anything you want, including mak
 After filling out all of the required fields, you can now upload the world. Press the "Upload World" button and wait for the confirmation of upload.\
 A screenshot below shows a successful upload.
 
-![Figure 6](screenshots\upload2.png)
+![Figure 6](./screenshots/upload2.png)
 
 And you're done! Enjoy your copied world.
 
