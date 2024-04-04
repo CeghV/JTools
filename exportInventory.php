@@ -31,7 +31,7 @@ if(!empty($_POST["id"]))    {
         header("Location: /index.php?error2=Couldn't refresh credentials (".$result[0].")");
         exit();
     }
-    $sessionCookie=substr($result[10],28,168);
+    $sessionCookie=substr($result[11],28,168);
     $resultJSON=json_decode($resultJSON);
     $csrfToken=$resultJSON->csrf;
     setcookie("jtools_session",$sessionCookie);
