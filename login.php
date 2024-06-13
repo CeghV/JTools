@@ -19,8 +19,8 @@ if(!empty($_POST["login-email"]) and !empty($_POST["login-password"]))   {
         header("Location: /index.php?error=Couldn't log in to jamango (".$result[0].")");
         exit();
     }
-    $sessionCookie=substr($result[11],28,168);
-    $refreshCookie=substr($result[12],36,168);
+    $sessionCookie=substr($result[12],28,168);
+    $refreshCookie=substr($result[13],36,168);
     $resultJSON=json_decode($resultJSON);
     $csrfToken=$resultJSON->csrf;
     setcookie("jtools_session",$sessionCookie);
