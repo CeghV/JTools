@@ -6,8 +6,39 @@
     <title>Jamango! Tools</title>
 </head>
 <body>
+
     <?php if(isset($_COOKIE["jtools_session"]) and isset($_COOKIE["jtools_csrf"]) and isset($_COOKIE["jtools_refresh_session"])){?>
+    <?php
+        if(isset($_COOKIE["token"]))    {
+            $token=$_COOKIE["token"];
+        }   else{
+            $header="Host: jamango.io\r\nCookie: jamango_session=".$_COOKIE["jtools_session"]."; jamango_refresh_session=".$_COOKIE["jtools_refresh_session"]."\r\nX-Csrf-Token: ".$_COOKIE["jtools_csrf"];
+            $refreshURL="https://jamango.io/ibs";
+            $options=[
+                "http"=>[
+                    "header"=>$header,
+                    "method"=>"POST"
+                ]
+            ];
+            $context=stream_context_create($options);
+            $resultJSON=file_get_contents($refreshURL,false,$context);
+            $resultJSON=json_decode($resultJSON);
+            $result=$http_response_header;
+            if($result[0]!="HTTP/1.1 200 OK")  {
+                header("Location: /index.php?error=Couldn't get token (".$result[0].")");
+                exit();
+            }
+            setcookie("token",$resultJSON->token);
+            $token=$resultJSON->token;
+        }
+    ?>
     <h1>Jamango! Tools</h1>
+    <h3>Get player token (WS)</h3>
+    <h4 style="color: darkred;"><?php echo($_GET["error"])?></h4>
+    <form enctype="multipart/form-data" action="getToken.php" method="POST">
+        <label for="submit">Token: <?=$token?></label><br><br>
+        <input type="submit" value="Refresh" name="submit"/>
+    </form>
     <h3>World blob to JSON</h3>
     <form enctype="multipart/form-data" action="toJSON.php" method="POST">
         <label for="blob">World blob file:</label>
